@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #faf3f0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnRemover {
+    cursor: pointer;
+    background-color: #FFCACC;
+    text-align: center;
+    width: 10%;
+    height: 40px;
+    border-radius: 40px;
+    border-width: 1px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+body header img {
+    width: 30%;
+}
+
+body form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body form input {
+    margin-right: 1%;
+    text-align: center;
+    width: 20%;
+    height: 40px;
+    border-radius: 40px;
+    background-image: linear-gradient(to right, #D4E2D4, #DBC4F0, #FFCACC);
+    border-width: 1px;
+    font-weight: bold;
+}
+
+body form button {
+    cursor: pointer;
+    width: 10%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #D4E2D4;
+    border-width: 1px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    font-size: 25px;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+.tarefa-concluida {
+    text-decoration: line-through;
+    cursor: pointer;    
+}
+
