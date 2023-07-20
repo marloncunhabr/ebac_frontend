@@ -4,33 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
+    <title>Formulario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
     <header>
-        <img src="./imagens/logo-checkorg.png" alt="Logo CheckOrg" />
-        <button type="reset" id="btnRemover">Limpar lista</button>
+        <h1>Cadastro de Pessoas Físicas</h1>
     </header>
 
-    <form>
-        <input type="text" id="inputTarefa" required placeholder="Escreva sua missão">
-        <button type="submit" id="btnAdicionar">Criar missão</button>
-    </form>
-
-    <div class="container">
-        <table id="tabelaTarefas">
-            <tbody>
-            </tbody>
-        </table>
+    <div class="form">
+        <form id="form">
+            <div class="form-campo">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            <div class="form-campo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(__) _ ____-____">
+            </div>
+            <div class="form-campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-campo">
+                <label for="CPF">CPF:</label>
+                <input type="text" id="CPF" name="CPF" placeholder="___-___-___-__">
+            </div>
+            <div class="form-campo">
+                <label for="Endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco">
+            </div>
+            <div class="form-campo">
+                <label for="CEP">CEP:</label>
+                <input type="text" id="CEP" name="CEP" placeholder="_____-___">
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
 
 </html>

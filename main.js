@@ -1,24 +1,42 @@
 $(document).ready(function () {
-    const inputTarefa = $('#inputTarefa');
-    const btnAdicionar = $('#btnAdicionar');
-    const btnRemover = $('#btnRemover');
-    const tabelaTarefas = $('#tabelaTarefas');
-    const tbody = tabelaTarefas.find('tbody');
+    $('#telefone').mask('(00) 00000-0000');
+    $('#CEP').mask('00000-000');
+    $('#CPF').mask('000.000.000-00');
 
-    btnAdicionar.click(function (event) {
-        event.preventDefault();
-        const novaTarefa = inputTarefa.val();
-        const novaLinha = $('<tr><td>' + novaTarefa + '</td></tr>');
-        tbody.append(novaLinha);
-        inputTarefa.val('');
-    });
+    $('#form').validate({
+        rules: {
+            nome: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            telefone: {
+                required: true
+            },
+            CEP: {
+                required: true
+            },
+            CPF: {
+                required: true,
+            },
+            endereco: {
+                required: true,
+            }
+        },
+        messages: {
+            nome: 'Por favor, insira o seu nome'
+        },
+        submitHandler: function (form) {
+            console.log(form)
+        },
+        invalidHandler: function (evento, validador) {
+            let camposIncorretos = validador.numberOfInvalids();
+            if (camposIncorretos) {
+                alert(`Existem ${camposIncorretos} campos incoretos`)
+            }
+        }
+    })
 
-    btnRemover.click(function (event) {
-        event.preventDefault();
-        tbody.empty();
-    });
-
-    tbody.on('click', 'tr', function () {
-        $(this).toggleClass('tarefa-concluida');
-    });
 });
